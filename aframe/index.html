@@ -16,7 +16,6 @@
     window.botpress.on('customEvent', (event) => {
       console.log(event);
       
-
       organsPaths = { 
         'lungs': 'lungs/lungs.gltf', 
         'heart': 'heart/heart.gltf', 
@@ -26,7 +25,7 @@
         'intestine': 'intestines/intestines.gltf' 
       }
 
-      if (paths.hasOwnProperty(event.action)) { 
+      if (organsPaths.hasOwnProperty(event.action)) { 
         const entity = document.querySelector('#model-entity');
  
         entity.parentNode.removeChild(entity); 
@@ -54,9 +53,9 @@
     >
       <a-entity
         id="model-entity"
-        gltf-model="/models/heart/heart.gltf"
+        gltf-model="/models/avatar/avatar.gltf"
         position='0 1 0'
-        rotation="90 180 0">
+        rotation="270 180 180">
       </a-entity> 
     </a-marker>
 
